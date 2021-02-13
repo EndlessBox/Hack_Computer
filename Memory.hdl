@@ -32,24 +32,27 @@ CHIP Memory {
     Not(in=address[14], out=not14);
     Not(in=address[13], out=not13);
     
-    And(a=not14, b=not13, out=preloadRam);
-    And(a=preloadRam, b=load, out=loadRam);
+    /*
+     * Manage Load
+     */
+    And(a=not14, b=not13, out=preloadRam1);
+    And(a=not14, b=address[13], out=preloadRam2);
+    Or(a=preloadRam1, b=preloadRam2, out=loadRamF);
+    And(a=loadRamF, b=load, out=loadRam);
     RAM16K(in=in, load=loadRam, address=address[0..13], out=outRam);
 
 
-    And(a=address[14], b=not13, out=preloadScreen1);
-    And(a=not14, b=address[13], out=preloadScreen2);
-    Or(a=preloadScreen1, b=preloadScreen2, out=preloadScreen);
+    And(a=address[14], b=not13, out=preloadScreen);
     And(a=preloadScreen, b=load, out=loadScreen);
     Screen(in=in, load=loadScreen, address=address[0..12], out=outScreen);
 
 
+    /*
+     * Manage Output
+     */
     Keyboard(out=outKeyboard);
-
-    // And(a=address[14], b=address[13], out=flagKeyboad);
-    Mux16(a=outScreen, b=outKeyboard, sel=address[13], out=outMuxScreenAndKeyboard);
-
-    Mux16(a=outRam, b=outMuxScreenAndKeyboard, sel=address[14], out=out);
+    Mux16(a=outScreen, b=outKeyboard, sel=address[13], out=outScreenKeyboad);
+    Mux16(a=outRam, b=outScreenKeyboad, sel=address[14], out=out);
 
 
 
