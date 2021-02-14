@@ -1,6 +1,6 @@
                                              # Hack_Computer
 
-This is my generale purpose, 16bits computer, that was the result creating elementary logic gates, then use them to build an ALU(Arithmetic and Logical Unit) and finaly
+This is my generale purpose, nand based, 16bits computer, that was the result creating elementary logic gates, then use them to build an ALU(Arithmetic and Logical Unit) and finaly
  a RAM Chip.
 
 This computer use the "Harverd Architecture" which is a slightly modified version of "Von Neumann Architecture", that separate the executable code, and other Ram Data,
@@ -62,3 +62,15 @@ Along with the A-instruction, these specifications determine all the possible op
 - [01 1] = destination bits.
 - [000] = jump bits.
 - another example : ==> @200 | D;JEQ
+
+### Ressources : 
+
+#### Arithmetic Gates
+https://github.com/EndlessBox/NandBased_Arithmetic_Gates
+
+#### Logic Gates
+https://github.com/EndlessBox/NandBased_Logic_Gates
+
+#### Sequential Gates Small And Big
+https://github.com/EndlessBox/NandBased_Sequential_Gates_Memory_small
+https://github.com/EndlessBox/NandBased_Sequential_Gates_Memory_large
