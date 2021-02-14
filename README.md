@@ -52,12 +52,13 @@ The instruction code is a specificationthat answers three questions:
 (a) what to compute, (b) where to store the computedvalue, and (c) what to do next? 
 Along with the A-instruction, these specifications determine all the possible operations of the computer.
       
-Example: destination = computation;jump
-       : MD=M+1 = [[1]11][1 1101 11][01 1][000]
-       : [1] = specify the instruction is C-Instruction
-       : [[]11] = those bits are ignored.
-       : [1 1101 11] = computation bits.
-       : [01 1] = destination bits.
-       : [000] = jump bits.
-       : another example : ==> @200 | D;JEQ
+##### Example
 
+- destination = computation;jump
+- MD=M+1 = [[1]11][1 1101 11][01 1][000]
+- [1] = specify the instruction is C-Instruction
+- [[]11] = those bits are ignored.
+- [1 1101 11] = computation bits.
+- [01 1] = destination bits.
+- [000] = jump bits.
+- another example : ==> @200 | D;JEQ
