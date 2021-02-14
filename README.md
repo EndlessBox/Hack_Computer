@@ -66,11 +66,11 @@ Along with the A-instruction, these specifications determine all the possible op
 ### Ressources : 
 
 #### Arithmetic Gates
-https://github.com/EndlessBox/NandBased_Arithmetic_Gates
+- https://github.com/EndlessBox/NandBased_Arithmetic_Gates
 
 #### Logic Gates
-https://github.com/EndlessBox/NandBased_Logic_Gates
+- https://github.com/EndlessBox/NandBased_Logic_Gates
 
 #### Sequential Gates Small And Big
-https://github.com/EndlessBox/NandBased_Sequential_Gates_Memory_small
-https://github.com/EndlessBox/NandBased_Sequential_Gates_Memory_large
+- https://github.com/EndlessBox/NandBased_Sequential_Gates_Memory_small
+- https://github.com/EndlessBox/NandBased_Sequential_Gates_Memory_large
